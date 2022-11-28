@@ -24,7 +24,7 @@ Route::view('dashboard', 'dashboard')->middleware('auth');
 Route::post('login', function(){
     $credentials = request()->validate([
         'email' => ['required', 'email', 'string'], 
-        'password' => ['required', 'string']
+        'password' => ['required', 'string'],
     ]);
     $remember = request()->filled('remember');
 
